@@ -19,6 +19,7 @@ public class Rabbit implements Runnable {
         this.turtleThread = turtleThread;
     }
 
+    @Override
     public void run() {
         try {
             while (!status.raceOver && position < TRACK_LENGTH) {

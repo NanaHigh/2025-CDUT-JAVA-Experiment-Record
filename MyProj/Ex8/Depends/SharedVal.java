@@ -10,6 +10,7 @@ public class SharedVal {
     public int i;            // 共享变量
     public Lock lock;        // 锁
     public Condition condition; // 条件变量
+    public boolean terminateFlag; // 终止标志
 
     public SharedVal() {
         this.currentStep = 0;
@@ -17,5 +18,6 @@ public class SharedVal {
         this.i = 0;
         this.lock = new ReentrantLock();
         this.condition = lock.newCondition();
+        this.terminateFlag = false;
     }
 }
